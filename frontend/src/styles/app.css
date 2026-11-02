@@ -1,0 +1,19 @@
+.boot {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--cream-dim);
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}

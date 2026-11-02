@@ -1,0 +1,64 @@
+/* Shared by the result views */
+.grid { width: 100%; border-collapse: collapse; font-size: var(--text-s); }
+.grid th {
+  position: sticky; top: 0;
+  padding: 0.45rem 0.75rem;
+  background: var(--pan);
+  border-bottom: 1px solid var(--edge);
+  color: var(--cream-dim);
+  font-weight: 600;
+  text-align: left;
+}
+.grid td { padding: 0.35rem 0.75rem; border-bottom: 1px solid var(--edge-soft); }
+.grid tbody tr:hover { background: var(--pan-raised); }
+.grid .num { text-align: right; width: 1%; white-space: nowrap; }
+.muted { color: var(--cream-faint); }
+
+.chip { padding: 0.1rem 0.55rem; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
+.chip--number { background: rgba(134, 197, 238, 0.14); color: var(--sky); }
+.chip--string { background: rgba(240, 166, 196, 0.14); color: var(--rose); }
+.chip--unknown { background: var(--edge); color: var(--cream-dim); }
+
+.empty-note { color: var(--cream-dim); padding: 0.5rem 0; }
+
+/* Errors */
+.errors { list-style: none; margin: 0 0 1rem; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+.errors__item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(255, 111, 79, 0.35);
+  border-left: 3px solid var(--paprika);
+  border-radius: var(--radius-s);
+  background: var(--paprika-wash);
+  text-align: left;
+}
+.errors__item:hover { border-color: var(--paprika); }
+.errors__where { color: var(--paprika); font-weight: 650; font-size: var(--text-s); white-space: nowrap; }
+.errors__msg { color: var(--cream); }
+.errors__stage { color: var(--cream-faint); font-size: 0.75rem; }
+
+/* Three-address code */
+.tac { list-style: none; margin: 0; padding: 0; font-size: 0.875rem; }
+.tac__row { display: grid; grid-template-columns: 2.5rem 1fr auto; align-items: baseline; padding: 0.2rem 0; }
+.tac__row--label { margin-top: 0.35rem; }
+.tac__n { color: var(--cream-faint); text-align: right; padding-right: 1rem; font-family: var(--font-code); }
+.tac__code { font-family: var(--font-code); white-space: pre; }
+.tac__src { color: var(--cream-faint); font-size: 0.72rem; padding-left: 1.5rem; }
+.tac__label { color: var(--lilac); font-weight: 600; }
+.tac__temp { color: var(--cream-dim); }
+
+/* Program output */
+.console {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-s);
+  border-left: 3px solid var(--basil);
+  background: var(--night);
+  font-size: 1rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}

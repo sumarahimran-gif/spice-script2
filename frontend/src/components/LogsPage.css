@@ -1,0 +1,56 @@
+.logs { flex: 1; min-height: 0; display: flex; flex-direction: column; max-width: 72rem; width: 100%; margin: 0 auto; }
+
+.logs__head {
+  flex: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.25rem 1rem;
+}
+.logs__head h1 { font-size: 1.6rem; font-weight: 750; letter-spacing: -0.015em; }
+.logs__head p { color: var(--cream-dim); }
+.logs__tools { display: flex; gap: 0.6rem; align-items: center; }
+
+.seg { display: inline-flex; border: 1px solid var(--edge); border-radius: var(--radius-s); overflow: hidden; }
+.seg button { padding: 0.45rem 0.9rem; border: 0; background: transparent; color: var(--cream-dim); font-weight: 560; }
+.seg button[aria-pressed="true"] { background: var(--saffron); color: var(--saffron-ink); font-weight: 700; }
+
+.logs__scroll { flex: 1; min-height: 0; overflow: auto; padding: 0 1.25rem 2rem; }
+.logs__empty { color: var(--cream-dim); padding: 2rem 0; }
+
+.logs__table { width: 100%; border-collapse: collapse; }
+.logs__table th {
+  position: sticky; top: 0;
+  padding: 0.55rem 0.75rem;
+  background: var(--night);
+  border-bottom: 1px solid var(--edge);
+  color: var(--cream-dim);
+  font-size: var(--text-s);
+  text-align: left;
+}
+.logs__table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--edge-soft); vertical-align: top; }
+.logs__table tr.is-expandable { cursor: pointer; }
+.logs__table tr.is-expandable:hover { background: var(--pan); }
+.logs__table .muted { white-space: nowrap; font-size: var(--text-s); }
+.logs__stage { color: var(--saffron); font-weight: 600; }
+
+.logs__program { max-width: 26rem; font-size: 0.8rem; }
+.logs__expand {
+  display: block; width: 100%;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  padding: 0; border: 0; background: none; text-align: left; color: var(--cream-dim);
+  font-family: inherit; font-size: inherit;
+}
+
+.pill { padding: 0.1rem 0.6rem; border-radius: 99px; font-size: 0.75rem; font-weight: 650; }
+.pill--success { background: var(--basil-wash); color: var(--basil); }
+.pill--error { background: var(--paprika-wash); color: var(--paprika); }
+
+.logs__detail td { background: var(--pan); }
+.logs__detail pre { margin: 0; padding: 0.75rem 1rem; overflow-x: auto; border-radius: var(--radius-s); background: var(--night); font-size: 0.8rem; }
+.logs__note { margin-bottom: 0.5rem; color: var(--cream-dim); font-size: var(--text-s); }
+
+@media (max-width: 640px) {
+  .logs__head { flex-direction: column; align-items: flex-start; }
+}

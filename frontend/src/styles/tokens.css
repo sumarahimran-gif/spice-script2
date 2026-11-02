@@ -1,0 +1,37 @@
+/* Design tokens: an aubergine-black kitchen with saffron, paprika and basil. */
+:root {
+  color-scheme: dark;
+
+  --night: #17121c;        /* page */
+  --pan: #1f1926;          /* panels */
+  --pan-raised: #292131;   /* hovered / raised surfaces */
+  --edge: #3a3045;         /* borders and dividers */
+  --edge-soft: #2d2437;
+
+  --cream: #f3ebdd;        /* main text */
+  --cream-dim: #b5aabd;    /* secondary text */
+  --cream-faint: #7d7388;  /* tertiary text */
+
+  --saffron: #f2b544;      /* primary accent */
+  --saffron-ink: #2a1c00;  /* text on saffron */
+  --paprika: #ff6f4f;      /* errors */
+  --basil: #9bd07f;        /* success */
+  --rose: #f0a6c4;         /* strings */
+  --sky: #86c5ee;          /* numbers */
+  --lilac: #c3a6ff;        /* operators */
+
+  --paprika-wash: rgba(255, 111, 79, 0.13);
+  --saffron-wash: rgba(242, 181, 68, 0.12);
+  --basil-wash: rgba(155, 208, 127, 0.12);
+
+  --font-ui: "Bricolage Grotesque Variable", "Segoe UI", system-ui, sans-serif;
+  --font-code: "JetBrains Mono Variable", "Cascadia Code", Consolas, monospace;
+
+  --text-s: 0.8125rem;
+  --text-m: 0.9375rem;
+  --text-l: 1.125rem;
+
+  --radius: 8px;
+  --radius-s: 5px;
+  --topbar-h: 3.25rem;
+}

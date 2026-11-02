@@ -1,0 +1,82 @@
+.editor {
+  --lh: 1.7rem;
+  --pad-y: 0.85rem;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: flex-start;
+  overflow: auto;
+  background: var(--night);
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+}
+
+.editor__gutter {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  flex: none;
+  min-height: 100%;
+  padding: var(--pad-y) 0.9rem var(--pad-y) 1rem;
+  background: var(--night);
+  border-right: 1px solid var(--edge-soft);
+  color: var(--cream-faint);
+  text-align: right;
+  line-height: var(--lh);
+  user-select: none;
+}
+.editor__gutter .has-error {
+  color: var(--paprika);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--paprika);
+  margin-left: -1rem;
+  padding-left: 1rem;
+}
+
+.editor__body {
+  position: relative;
+  flex: 1;
+  min-height: 100%;
+  padding: var(--pad-y) 0;
+}
+
+.editor__marks {
+  position: absolute;
+  inset: var(--pad-y) 0 0 0;
+  pointer-events: none;
+}
+.editor__mark {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--line) * var(--lh));
+  height: var(--lh);
+  background: var(--paprika-wash);
+}
+.editor__squiggle {
+  position: absolute;
+  left: calc(1rem + var(--col) * 1ch);
+  width: calc(var(--len) * 1ch);
+  bottom: 2px;
+  border-bottom: 2px dotted var(--paprika);
+}
+
+.editor__input {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: calc(var(--rows) * var(--lh));
+  margin: 0;
+  padding: 0 1rem;
+  border: 0;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  background: transparent;
+  color: var(--cream);
+  font: inherit;
+  line-height: var(--lh);
+  white-space: pre;
+  tab-size: 2;
+  caret-color: var(--saffron);
+}
