@@ -9,6 +9,11 @@ const proxy = { "/api": { target: backend, changeOrigin: true } };
 
 export default defineConfig({
   plugins: [react()],
-  server: { port: 5173, strictPort: true, proxy },
+  server: {
+    port: 5173,
+    strictPort: true,
+    allowedHosts: [".trycloudflare.com"],
+    proxy,
+  },
   preview: { port: 5173, strictPort: true, proxy },
 });

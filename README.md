@@ -41,6 +41,13 @@ it feeds one stage's output to the next and reports when a stage is blocked by a
 Register an account on the login page (the first account is the admin), pick a sample from
 the Grammar panel, and press Run all, or click a single stage to run just that engine.
 
+## Share a temporary browser link
+1. Install `cloudflared` using the [Cloudflare Tunnel installation instructions](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/).
+2. Run `start-spicescript.bat` and wait for the local app to start.
+3. Run `share-spicescript.bat`. Copy the `https://...trycloudflare.com` URL printed in that window and send it to the other person.
+
+Keep both app-server windows and the tunnel window open while they use the app. Closing the tunnel window stops sharing, and a new run creates a different URL. Anyone with the link can access the app, and the first account registered in a fresh database becomes admin; only share a demo database and do not use sensitive data.
+
 ## How to test it (for the examiner)
 1. Start the backend and the frontend (see above) and open http://localhost:5173.
 2. Register an account, then sign in. The first account is the admin.
